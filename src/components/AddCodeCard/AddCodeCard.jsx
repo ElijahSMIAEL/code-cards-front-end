@@ -3,7 +3,8 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import * as setService from '../../services/setService'
 
-const AddCodeCard = () => {
+const AddCodeCard = (props) => {
+  const set = props.set
   const navigate = useNavigate()
   const [cards, setCards] = useState([])
   const [formData, setFormData] = useState({
@@ -21,13 +22,12 @@ const AddCodeCard = () => {
   const handleSubmit = async e => {
     e.preventDefault()
     try {
-      const newCard = await setService.createCard(  formData)
+      const newCard = await setService.createCard(set._id, formData)
         setCards([...cards, newCard])
     } catch (err) {
         console.log(err)
     }
   }
-
 
   const {prompt, answer} = formData
   const isFormInvalid = () => {
@@ -59,7 +59,7 @@ const AddCodeCard = () => {
           placeholder='Answer...'
           value={formData.answer}
         />
-        <button disabled={isFormInvalid()} className={styles.AddCardButton}>
+        <button disabled={isFormInvalid()} className={styles.AddCardButton}>Add Code Card
         </button>
       </form>
     </main>

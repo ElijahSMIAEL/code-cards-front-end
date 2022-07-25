@@ -37,9 +37,7 @@ const App = () => {
   const handleAddSet = async (setData) => {
     const newSet = await setService.create(setData)
     setSets([...sets, newSet])
-    const setId = newSet._id
-    navigate(`sets/${setId}/edit`)
-    // Navigate to add cards to SetID 
+    navigate('/')
   }
 
 
@@ -47,7 +45,7 @@ const App = () => {
     <>
       <NavBar user={user} handleLogout={handleLogout} />
       <Routes>
-        <Route path="/" element={<Landing user={user} />} />
+        <Route path="/" element={<Landing sets={sets} user={user} />} />
         <Route
           path="/signup"
           element={<Signup handleSignupOrLogin={handleSignupOrLogin} />}
@@ -58,7 +56,7 @@ const App = () => {
         />
         <Route
           path="/sets/:id/edit"
-          element={user ? <EditSet sets={sets}/> : <Navigate to="/login" />}
+          element={user ? <EditSet /> : <Navigate to="/login" />}
         />
         <Route
           path="/AddSet"

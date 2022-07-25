@@ -1,10 +1,13 @@
 import styles from './Landing.module.css'
 import { useState } from 'react'
+import SetList from '../../components/SetList/SetList'
 
-const Landing = ({ user }) => {
+const Landing = (props) => {
+  console.log("These are sets", props.sets)
   return (
     <main className={styles.container}>
-      <h1>hello, {user ? user.name : 'friend'}</h1>
+      <h1>hello, {props.user ? props.user.name : 'friend'}</h1>
+      <SetList sets={props.sets} profile={props.user.profile}/>
     </main>
   )
 }
