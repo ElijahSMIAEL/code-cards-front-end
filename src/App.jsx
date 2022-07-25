@@ -9,11 +9,20 @@ import ChangePassword from './pages/ChangePassword/ChangePassword'
 import * as authService from './services/authService'
 import AddSet from './pages/AddSet/AddSet'
 import * as setService from './services/setService'
+import EditSet from './pages/EditSet/EditSet'
 
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
   const [sets, setSets ] = useState([])
   const navigate = useNavigate()
+
+  useEffect (() => {
+    const fetchAllSets = async () => {
+      const setData = await setService.getAll()
+      setSets(setData)
+    }
+    fetchAllSets()
+  }, [])
 
   const handleLogout = () => {
     authService.logout()
@@ -28,9 +37,11 @@ const App = () => {
   const handleAddSet = async (setData) => {
     const newSet = await setService.create(setData)
     setSets([...sets, newSet])
-    navigate('/')
+    const setId = newSet._id
+    navigate(`sets/${setId}/edit`)
     // Navigate to add cards to SetID 
   }
+
 
   return (
     <>
@@ -44,6 +55,10 @@ const App = () => {
         <Route
           path="/login"
           element={<Login handleSignupOrLogin={handleSignupOrLogin} />}
+        />
+        <Route
+          path="/sets/:id/edit"
+          element={user ? <EditSet sets={sets}/> : <Navigate to="/login" />}
         />
         <Route
           path="/AddSet"

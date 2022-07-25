@@ -29,7 +29,7 @@ const AddSet = (props) => {
 
   const {title} = formData
   const isFormInvalid = () => {
-    return !(formData)
+    return !(title)
   }
 
   return (
