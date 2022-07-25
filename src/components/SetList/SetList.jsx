@@ -1,4 +1,4 @@
-import styles from './SetList.modules.css'
+import styles from './SetList.module.css'
 
 const SetList = () => {
   return (

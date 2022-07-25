@@ -1,4 +1,4 @@
-import styles from './ProfileCard.modules.css'
+import styles from './ProfileCard.module.css'
 
 const ProfileCard = () => {
   return (

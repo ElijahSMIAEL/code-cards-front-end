@@ -28,6 +28,7 @@ const App = () => {
   const handleAddSet = async (setData) => {
     const newSet = await setService.create(setData)
     setSets([...sets, newSet])
+    navigate('/')
     // Navigate to add cards to SetID 
   }
 

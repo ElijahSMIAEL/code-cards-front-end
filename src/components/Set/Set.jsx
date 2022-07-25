@@ -1,4 +1,4 @@
-import styles from './Set.modules.css'
+import styles from './Set.module.css'
 
 const Set = () => {
   return (

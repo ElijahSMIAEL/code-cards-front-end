@@ -1,4 +1,4 @@
-import styles from './CodeCard.modules.css'
+import styles from './CodeCard.module.css'
 
 const CodeCard = () => {
   return (

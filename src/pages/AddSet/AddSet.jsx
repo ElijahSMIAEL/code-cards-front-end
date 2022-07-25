@@ -1,4 +1,4 @@
-import styles from './AddSet.modules.css'
+import styles from './AddSet.module.css'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
