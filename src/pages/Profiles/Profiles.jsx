@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import * as profileService from '../../services/profileService'
+import styles from './Profiles.modules.css'
 
 const Profiles = () => {
   const [profiles, setProfiles] = useState([])
@@ -26,6 +27,6 @@ const Profiles = () => {
       }
     </>
   )
-}
+} 
  
 export default Profiles
