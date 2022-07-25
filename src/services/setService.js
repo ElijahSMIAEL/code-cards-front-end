@@ -14,7 +14,24 @@ async function create(setData) {
   return await res.json()
 }
 
+async function getAll() {
+  const res = await fetch(BASE_URl)
+  return await res.json()
+}
+
+async function createCard(setId, cardData) {
+  const res = await fetch(`${BASE_URl}/${setId}/cards`, {
+    method: "POST",
+    headers: {
+      'Authorization': `Bearer ${tokenService.getToken()}`,
+      'Content-Type' : 'application/json'
+    },
+    body: JSON.stringify(cardData)
+  })
+}
 
 export {
   create,
+  createCard,
+  getAll,
 }
