@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Routes, Route, useNavigate, Navigate } from 'react-router-dom'
 import NavBar from './components/NavBar/NavBar'
 import Signup from './pages/Signup/Signup'
@@ -7,9 +7,12 @@ import Landing from './pages/Landing/Landing'
 import Profiles from './pages/Profiles/Profiles'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
 import * as authService from './services/authService'
+import AddSet from './pages/AddSet/AddSet'
+import * as setService from './services/setService'
 
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
+  const [sets, setSets ] = useState([])
   const navigate = useNavigate()
 
   const handleLogout = () => {
@@ -20,6 +23,12 @@ const App = () => {
 
   const handleSignupOrLogin = () => {
     setUser(authService.getUser())
+  }
+
+  const handleAddSet = async (setData) => {
+    const newSet = await setService.create(setData)
+    setSets([...sets, newSet])
+    // Navigate to add cards to SetID 
   }
 
   return (
@@ -34,6 +43,10 @@ const App = () => {
         <Route
           path="/login"
           element={<Login handleSignupOrLogin={handleSignupOrLogin} />}
+        />
+        <Route
+          path="/AddSet"
+          element={user ? <AddSet handleAddSet={handleAddSet} /> : <Navigate to="/login" />}
         />
         <Route
           path="/profiles"
