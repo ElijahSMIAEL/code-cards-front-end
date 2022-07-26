@@ -5,7 +5,7 @@ const Set = (props) => {
   const set = props.set
   return (
     <div className="card">
-      <Link state={{set}} to={`/sets/${set._id}/edit`}>
+      <Link state={{set}} to={`/sets/${set._id}`}>
         <div className="card-body">
             <h1>{set.title}</h1>
         </div>
