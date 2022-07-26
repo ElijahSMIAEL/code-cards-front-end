@@ -44,6 +44,7 @@ const SetList = (props) => {
           key={set._id}
           user={props.user}
           set={set}
+          handleDeleteSet={props.handleDeleteSet}
           />
         )
       }

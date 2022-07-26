@@ -96,3 +96,7 @@ input {
 select{
   margin: 30px auto;
 }
+
+.label {
+  color: #5DB7DE;
+}
