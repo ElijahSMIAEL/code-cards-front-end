@@ -1,4 +1,4 @@
-import styles from './SetCard.module.css'
+import  './SetCard.css'
 import { Link } from 'react-router-dom'
 
 const Set = (props) => {
@@ -11,7 +11,7 @@ const Set = (props) => {
         </div>
       </Link>
       <button 
-            className="btn btn-sm btn-danger m-left"
+            className="btn btn-danger"
             onClick={()=> props.handleDeleteSet(set._id)}
           >
             Delete
