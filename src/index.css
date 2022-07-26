@@ -100,3 +100,8 @@ select{
 .label {
   color: #5DB7DE;
 }
+
+.app-title {
+  font-size: 60px;
+  margin: 5vh;
+}
