@@ -49,10 +49,22 @@ async function deleteOne(id) {
   return res.json()
 }
 
+async function deleteCard(setId, cardId) {
+  const res = await fetch(`${BASE_URL}/${setId}/delete-card/${cardId}`, {
+    method: 'DELETE',
+    headers: {
+      'Authorization': `Bearer ${tokenService.getToken()}`,
+      'Content-Type' : 'application/json'
+    }
+  })
+  return await res.json()
+}
+
 export {
   create,
   createCard,
   getAll,
   getSetDetails,
   deleteOne,
+  deleteCard,
 }
