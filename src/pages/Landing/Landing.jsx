@@ -3,7 +3,6 @@ import { useState } from 'react'
 import SetList from '../../components/SetList/SetList'
 
 const Landing = (props) => {
-  console.log("These are sets", props.sets)
   return (
     <main className={styles.container}>
       <h1>hello, {props.user ? props.user.name : 'friend'}</h1>
