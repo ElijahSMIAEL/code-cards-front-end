@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const ProfileCard = (props) => {
   const profile = props.profile
   return (
-    <div>
+    <div className={styles.container}>
       <Link 
         to={`/profile-details/${profile._id}`}  
         state={{ profile }}
