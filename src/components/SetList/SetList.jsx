@@ -30,6 +30,7 @@ const SetList = (props) => {
         <option value="CSS">CSS</option>
         <option value="Python">Python</option>
       </select>
+      <div className={styles.setContainer}>
       { category ? 
         filteredSets.map(set => 
           <SetCard 
@@ -48,6 +49,7 @@ const SetList = (props) => {
           />
         )
       }
+      </div>
     </div>
   )
 }
