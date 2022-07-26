@@ -27,7 +27,6 @@ code {
 }
 
 .btn.btn-secondary {
-  display: flex;
   border: solid 2px #212529;
   box-shadow: 2px 2px 6px grey;
   font-size: 12px;
