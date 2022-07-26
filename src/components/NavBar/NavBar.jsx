@@ -17,8 +17,16 @@ const NavBar = ({ user, handleLogout }) => {
       :
         <nav>
           <ul>
-            <li><Link to="/login">Log In</Link></li>
-            <li><Link to="/signup">Sign Up</Link></li>
+            <li>
+              <Link to="/login">
+                <span class="material-symbols-outlined">login</span>
+              </Link>
+            </li>
+            <li>
+              <Link to="/signup">
+                <span class="material-symbols-outlined">key</span>
+              </Link>
+            </li>
           </ul>
         </nav>
       }
