@@ -57,7 +57,7 @@ console.log("This is the set details", setDetails);
           ({index + 1} of {cards.length})
         </h3>
         <button onClick={handleMoreClick}>
-          {showMore ? 'Hide' : 'Show'}
+          {showMore ? 'Hide' : 'Show Answer'}
         </button>
         {
           showMore && 
