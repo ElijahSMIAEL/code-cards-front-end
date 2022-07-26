@@ -8,6 +8,8 @@ import 'prismjs/themes/prism.css';
 const CodeCard = (props) => {
   const card = props.card
   const codeBlock = card.code 
+  const cardId = card._id
+  const setId = props.setDetails._id
   return (
     <div>
       <h2>{card.prompt}</h2>
@@ -17,7 +19,8 @@ const CodeCard = (props) => {
         style={{
           backgroundColor: "white"
         }}
-      />
+        />
+        <button onClick={()=> props.handleDeleteCard(setId, cardId)}>Delete</button>
     </div>
   )
 }

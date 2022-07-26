@@ -27,6 +27,11 @@ const EditSet = (props) => {
     setSetDetails(updatedSet)
   }
 
+  const handleDeleteCard = async (setId, cardId) => {
+    const updatedCards = await setService.deleteCard(setId, cardId)
+    setSetDetails(updatedCards)
+  }
+
   return (
     <main>
       <h1>{setDetails.title}</h1>
@@ -36,6 +41,8 @@ const EditSet = (props) => {
       <div>
       { setDetails.cards.map(card => 
         <CodeCard 
+          setDetails={setDetails}
+          handleDeleteCard={handleDeleteCard}
           card={card}
           key={card._id}
         />
