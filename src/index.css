@@ -5,6 +5,7 @@ body {
     'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #061320;
 }
 
 code {
@@ -23,7 +24,7 @@ code {
 a {
   color: var(--accent);
   padding: 1vmin;
-  border-radius: 1vmin;
+  border-radius: none;
   text-decoration: none !important;
 }
 
@@ -44,4 +45,16 @@ nav > a {
 
 .m-left {
   margin-left: 10px;
+}
+
+.card {
+  margin: 30px;
+  background-color: rgb(24, 63, 63);
+  border-radius: 3px;
+  box-shadow: 10px 10px 10px #000000;
+  border: solid 2px lightcoral;
+}
+
+.card-body {
+  border-radius: 3px;
 }

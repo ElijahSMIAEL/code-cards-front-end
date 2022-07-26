@@ -4,9 +4,11 @@ import { Link } from 'react-router-dom'
 const Set = (props) => {
   const set = props.set
   return (
-    <div>
+    <div className="card">
       <Link state={{set}} to={`/sets/${set._id}/edit`}>
-      <h1>{set.title}</h1>
+        <div className="card-body">
+            <h1>{set.title}</h1>
+        </div>
       </Link>
     </div>
   )
