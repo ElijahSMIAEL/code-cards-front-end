@@ -59,3 +59,18 @@ nav > a {
 .card-body {
   border-radius: 3px;
 }
+
+#category-select {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px auto;
+  border: 30px 30px;
+}
+
+h1 {
+  display: flex;
+  color: #5DB7DE;
+  align-items: center;
+  justify-content: center;
+}
