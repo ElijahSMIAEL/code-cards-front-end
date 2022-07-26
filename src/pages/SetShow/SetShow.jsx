@@ -2,6 +2,11 @@ import { useState, useEffect } from "react";
 import * as setService from "../../services/setService";
 import { useLocation } from 'react-router-dom';
 import styles from "./SetShow.module.css";
+import Editor from "react-simple-code-editor";
+import { highlight, languages } from "prismjs/components/prism-core";
+import 'prismjs/components/prism-clike';
+import 'prismjs/components/prism-javascript';
+import 'prismjs/themes/prism.css';
 
 const SetShow = (props) => {
   const location = useLocation()
@@ -66,9 +71,14 @@ console.log("This is the set details", setDetails);
         </button>
         {
           showMore && 
-          <p className={styles.cardAnswerShow}>
-            {cards[index].answer}
-          </p>
+          <Editor 
+            value={cards[index].code}
+            codeBlock = {cards[index].code}
+            highlight={codeBlock => highlight(codeBlock, languages.js)}
+            style ={{
+              backgroundColor: "white"
+            }}
+          />
         }
       </div>
       }
