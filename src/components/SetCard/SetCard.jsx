@@ -10,12 +10,15 @@ const Set = (props) => {
             <h1>{set.title}</h1>
         </div>
       </Link>
-      <button 
+      {props.user?.profile === set.owner?._id &&
+          <button 
             className="btn btn-danger"
             onClick={()=> props.handleDeleteSet(set._id)}
           >
             Delete
           </button>
+      
+      }
     </div>
   )
 }
