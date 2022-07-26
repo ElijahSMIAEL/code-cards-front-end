@@ -4,6 +4,7 @@ import Set from '../Set/Set'
 const SetList = (props) => {
   const sets = props.sets
   const ownedSets = sets.filter(set => set.owner._id === props.profile)
+  
 
   return (
     <div>
