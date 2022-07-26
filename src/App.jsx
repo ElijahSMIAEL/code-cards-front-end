@@ -52,6 +52,7 @@ const App = () => {
 
   return (
     <>
+      <h1 className='app-title'>Code Cards</h1>
       <Routes>
         <Route path='/profile-details/:id' element={<ProfileDetails user={user} sets={sets} />} 
         />
