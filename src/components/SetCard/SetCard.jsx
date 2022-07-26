@@ -10,6 +10,7 @@ const Set = (props) => {
             <h1>{set.title}</h1>
         </div>
       </Link>
+      <button><Link state={{set}} to={`/sets/${set._id}/edit`}/></button>
     </div>
   )
 }

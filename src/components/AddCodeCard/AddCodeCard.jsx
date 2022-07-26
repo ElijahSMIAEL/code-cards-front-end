@@ -2,14 +2,18 @@ import styles from './AddCodeCard.modules.css'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import * as setService from '../../services/setService'
+import Editor from "react-simple-code-editor"
+import { highlight, languages } from "prismjs/components/prism-core";
+import 'prismjs/components/prism-clike';
+import 'prismjs/components/prism-javascript';
+import 'prismjs/themes/prism-tomorrow.css';
 
 const AddCodeCard = (props) => {
   const set = props.set
   const navigate = useNavigate()
-  
   const [formData, setFormData] = useState({
     prompt: '',
-    answer: ''
+    code: ''
   })
 
   const handleChange = e => {
@@ -21,16 +25,20 @@ const AddCodeCard = (props) => {
 
   const handleSubmit = async e => {
     e.preventDefault()
+    const form = {
+      prompt: formData.prompt,
+      code : formData.code
+    }
     try {
-      props.handleAddCard(set._id, formData)
+      props.handleAddCard(set._id, form)
     } catch (err) {
         console.log(err)
     }
   }
 
-  const {prompt, answer} = formData
+  const {prompt, code} = formData
   const isFormInvalid = () => {
-    return !(prompt, answer)
+    return !(prompt, code)
   }
 
   return (
@@ -50,14 +58,27 @@ const AddCodeCard = (props) => {
           value={formData.prompt}
         />
         <label htmlFor="answer-input">Enter Answer:</label>
-        <textarea 
+        <Editor 
+          placeholder='Add Answer Code Here...'
+          value={formData.code}
+          name="code"
+          code={code}
+          onChange={handleChange}
+          highlight={code => highlight(code, languages.js)}
+          textareaClassName="code-editor"
+          style={{
+            backgroundColor: "white",
+          }}
+        />
+        
+        {/* <textarea 
           onChange={handleChange}
           type="text" 
           name="answer" 
           id="answer-input"
           placeholder='Answer...'
           value={formData.answer}
-        />
+        /> */}
         <button disabled={isFormInvalid()} className="btn btn-secondary">Add Code Card
         </button>
       </form>
