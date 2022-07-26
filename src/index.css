@@ -27,10 +27,10 @@ a {
   text-decoration: none !important;
 }
 
-a:hover {
+/* a:hover {
   color: var(--black);
   background-color: var(--accent);
-}
+} */
 
 a.active {
   color: var(--background);

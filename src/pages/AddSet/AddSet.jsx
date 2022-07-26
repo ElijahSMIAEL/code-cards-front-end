@@ -58,7 +58,7 @@ const AddSet = (props) => {
           <option value="CSS">CSS</option>
           <option value="Python">Python</option>
         </select>
-        <button disabled={isFormInvalid()} className={styles.AddSetButton}>
+        <button disabled={isFormInvalid()} className="btn btn-secondary">
           Create New Set
         </button>
       </form>
