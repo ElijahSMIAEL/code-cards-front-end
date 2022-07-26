@@ -10,6 +10,7 @@ import * as authService from './services/authService'
 import AddSet from './pages/AddSet/AddSet'
 import * as setService from './services/setService'
 import EditSet from './pages/EditSet/EditSet'
+import ProfileDetails from './pages/ProfileDetails/ProfileDetails'
 
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
@@ -45,6 +46,7 @@ const App = () => {
     <>
       <NavBar user={user} handleLogout={handleLogout} />
       <Routes>
+        <Route path='/profile-details' element={<ProfileDetails user={user} sets={sets} />} />
         <Route path="/" element={<Landing sets={sets} user={user} />} />
         <Route
           path="/signup"
