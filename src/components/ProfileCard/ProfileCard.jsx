@@ -1,8 +1,9 @@
 import styles from './ProfileCard.module.css'
 
-const ProfileCard = () => {
+const ProfileCard = (props) => {
   return (
     <div>
+      {props.set.title}
     </div>
   )
 }

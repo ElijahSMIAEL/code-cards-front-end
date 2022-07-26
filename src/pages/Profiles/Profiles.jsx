@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react'
 import * as profileService from '../../services/profileService'
-import styles from './Profiles.module.css'
+import { Link } from 'react-router-dom'
+
+
 
 const Profiles = () => {
   const [profiles, setProfiles] = useState([])
-
+  
   useEffect(() => {
     const fetchProfiles = async () => {
       const profileData = await profileService.getAllProfiles()
@@ -12,21 +14,29 @@ const Profiles = () => {
     }
     fetchProfiles()
   }, [])
+  
 
   return (
-    <main>
-      <h1>Hello. This is a list of all the profiles.</h1>
+    <>
       {profiles.length ? 
         <>
-          {profiles.map(profile =>
-            <p key={profile._id}>{profile.name}</p>
-          )}
+          {profiles.map(profile => 
+          <Link 
+          to='/profile-details' 
+          key={profile._id} 
+          state={{ profile }}
+          >
+            <div>
+            <h2>{profile.name}</h2>
+            </div>
+          </Link>
+            )}
         </>
       :
         <p>No profiles yet</p>
       }
-    </main>
+    </>
   )
-} 
- 
+}
+
 export default Profiles
