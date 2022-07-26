@@ -58,6 +58,10 @@ nav > a {
   border-radius: 3px;
 }
 
+h1 {
+  color: #5DB7DE;
+}
+
 #category-select {
   display: flex;
   align-items: center;

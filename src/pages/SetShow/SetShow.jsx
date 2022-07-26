@@ -24,12 +24,14 @@ console.log("This is the set details", setDetails);
 function handleClick() {
   if (index < cards.length - 1 ){
     setIndex(index + 1)
+    setShowMore(false)
   }
 }
 
 function handleBack() {
   if (index > 0){
     setIndex(index - 1)
+    setShowMore(false)
   }
 }
 
