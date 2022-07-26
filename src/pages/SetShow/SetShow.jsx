@@ -25,8 +25,6 @@ const SetShow = (props) => {
     fetchSetDetails()
   }, [])
 
-console.log("This is the set details", setDetails);
-
 function handleClick() {
   if (index < cards.length - 1 ){
     setIndex(index + 1)
@@ -44,7 +42,6 @@ function handleBack() {
 function handleMoreClick() {
   setShowMore(!showMore)
 }
-console.log("This is the set details", setDetails);
 
   return ( 
     <main>
