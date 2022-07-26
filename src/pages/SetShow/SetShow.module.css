@@ -3,26 +3,55 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80px;
-  height: 100%;
-  background-color: rgb(249, 249, 249);
+  height: 5vh;
+  background-color: #A39B8B;
   border-radius: 10px;
   border: none;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 1.9vh .9vw 1.9vh .9vw;
+  margin: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.cardBtnShow:hover {
+  background-color: #5DB7DE;
+  color: #fff;
+}
+
+
+
+.cardIdxShow {
+  display: grid;
+  justify-content: right;
+  align-items: right;
+  height: 100%;
+  border-radius: 10px;
+  border: none;
   padding: 10px;
   margin-bottom: 20px;
   font-size: 20px;
 }
-.cardIdxShow {
+.cardPromptShow {
+  font-size: 5rem;
+  font-weight: bolder;
+}
+.btnCardCarousel {
   display: flex;
   justify-content: center;
-  align-items: right;
-  width: 80px;
-  height: 100%;
+  align-items: center;
+}
+.cardAnswerShow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5vh;
   border-radius: 10px;
   border: none;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  padding: 10px;
-  margin-bottom: 20px;
-  font-size: 20px;
+  font-size: 2.75rem;
+  padding: 2.5vh .9vw 2.5vh .9vw;
+  margin: 20px;
+  font-weight: bold;
+  color: #5DB7DE;
 }
+

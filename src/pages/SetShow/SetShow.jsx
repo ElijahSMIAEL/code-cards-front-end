@@ -47,24 +47,26 @@ console.log("This is the set details", setDetails);
       <h2>Loading...</h2>
       :
       <div className="card">
+        <h1 className={styles.cardPromptShow}>
+          <i>{cards[index].prompt} </i> 
+        </h1>
+        <h3 className={styles.cardIdxShow}>  
+          ({index + 1} of {cards.length})
+        </h3>
+        <div className={styles.btnCardCarousel}>
         <button className={styles.cardBtnShow} onClick={handleBack}>
           Back
         </button>
         <button className={styles.cardBtnShow} onClick={handleClick}>
           Next
         </button>
-        <h2>
-          <i>{cards[index].prompt} </i> 
-        </h2>
-        <h3 className={styles.cardIdxShow}>  
-          ({index + 1} of {cards.length})
-        </h3>
+        </div>
         <button className={styles.cardBtnShow} onClick={handleMoreClick}>
           {showMore ? 'Hide' : 'Show Answer'}
         </button>
         {
           showMore && 
-          <p>
+          <p className={styles.cardAnswerShow}>
             {cards[index].answer}
           </p>
         }
