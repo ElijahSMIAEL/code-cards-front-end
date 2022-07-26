@@ -37,7 +37,7 @@ const EditSet = (props) => {
       { setDetails.cards.map(card => 
         <CodeCard 
           card={card}
-          key={card}
+          key={card._id}
         />
       )}
       { isOwner ?
