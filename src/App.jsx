@@ -44,7 +44,6 @@ const App = () => {
 
   return (
     <>
-      <NavBar user={user} handleLogout={handleLogout} />
       <Routes>
         <Route path='/profile-details/:id' element={<ProfileDetails user={user} sets={sets} />} 
         />
@@ -80,6 +79,7 @@ const App = () => {
           }
         />
       </Routes>
+      <NavBar user={user} handleLogout={handleLogout} />
     </>
   )
 }
