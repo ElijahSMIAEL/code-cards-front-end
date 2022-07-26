@@ -58,7 +58,7 @@ const AddCodeCard = (props) => {
           placeholder='Answer...'
           value={formData.answer}
         />
-        <button disabled={isFormInvalid()} className={styles.AddCardButton}>Add Code Card
+        <button disabled={isFormInvalid()} className="btn btn-secondary">Add Code Card
         </button>
       </form>
     </main>

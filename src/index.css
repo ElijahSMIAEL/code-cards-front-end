@@ -28,8 +28,6 @@ a {
   text-decoration: none !important;
 }
 
-
-
 a.active {
   color: var(--background);
   background-color: var(--black);
