@@ -45,6 +45,7 @@ const EditSet = (props) => {
           handleDeleteCard={handleDeleteCard}
           card={card}
           key={card._id}
+          user={props.user}
         />
       )}
       { isOwner ?

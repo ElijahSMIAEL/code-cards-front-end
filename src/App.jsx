@@ -66,7 +66,7 @@ const App = () => {
         />
         <Route
           path="/sets/:id/edit"
-          element={user ? <EditSet /> : <Navigate to="/login" />}
+          element={user ? <EditSet user={user} /> : <Navigate to="/login" />}
         />
         <Route
           path="/sets/:id/"
