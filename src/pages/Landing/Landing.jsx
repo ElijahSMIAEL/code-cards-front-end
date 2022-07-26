@@ -7,7 +7,7 @@ const Landing = (props) => {
   return (
     <main className={styles.container}>
       <h1>hello, {props.user ? props.user.name : 'friend'}</h1>
-      <SetList sets={props.sets} profile={props.user.profile}/>
+      <SetList sets={props.sets} profile={props.user?.profile}/>
     </main>
   )
 }

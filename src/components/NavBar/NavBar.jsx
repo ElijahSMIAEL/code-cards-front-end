@@ -6,28 +6,32 @@ const NavBar = ({ user, handleLogout }) => {
     <>
       {user ?
         <nav>
-          <ul>
-            <li>Welcome, {user.name}</li>
-            <li><Link to="/profiles">Profiles</Link></li>
-            <li><Link to="" onClick={handleLogout}>LOG OUT</Link></li>
-            <li><Link to="/changePassword">Change Password</Link></li>
-            <li><Link to="/AddSet">Add Set</Link></li>
-          </ul>
+          <div>
+            <h1>Welcome, {user.name}</h1>
+            <Link to="/profiles">
+              <span class="material-symbols-outlined">group</span>
+            </Link>
+            <Link to="" onClick={handleLogout}>
+              <span class="material-symbols-outlined">logout</span>
+            </Link>
+            <Link to="/changePassword">
+              <span class="material-symbols-outlined">key</span>
+            </Link>
+            <Link to="/AddSet">
+              <span class="material-symbols-outlined">add</span>
+            </Link>
+          </div>
         </nav>
       :
         <nav>
-          <ul>
-            <li>
-              <Link to="/login">
-                <span class="material-symbols-outlined">login</span>
-              </Link>
-            </li>
-            <li>
-              <Link to="/signup">
-                <span class="material-symbols-outlined">key</span>
-              </Link>
-            </li>
-          </ul>
+          <div>
+            <Link to="/login">
+              <span class="material-symbols-outlined">login</span>
+            </Link>
+            <Link to="/signup">
+              <span class="material-symbols-outlined">key</span>
+            </Link>
+          </div>
         </nav>
       }
     </>
