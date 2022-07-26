@@ -1,0 +1,28 @@
+
+.cardBtnShow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 100%;
+  background-color: rgb(249, 249, 249);
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+.cardIdxShow {
+  display: flex;
+  justify-content: center;
+  align-items: right;
+  width: 80px;
+  height: 100%;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import * as setService from "../../services/setService";
 import { useLocation } from 'react-router-dom';
+import styles from "./SetShow.module.css";
 
 const SetShow = (props) => {
   const location = useLocation()
@@ -24,12 +25,14 @@ console.log("This is the set details", setDetails);
 function handleClick() {
   if (index < cards.length - 1 ){
     setIndex(index + 1)
+    setShowMore(false)
   }
 }
 
 function handleBack() {
   if (index > 0){
     setIndex(index - 1)
+    setShowMore(false)
   }
 }
 
@@ -44,19 +47,19 @@ console.log("This is the set details", setDetails);
       <h2>Loading...</h2>
       :
       <div className="card">
-        <button onClick={handleBack}>
+        <button className={styles.cardBtnShow} onClick={handleBack}>
           Back
         </button>
-        <button onClick={handleClick}>
+        <button className={styles.cardBtnShow} onClick={handleClick}>
           Next
         </button>
         <h2>
           <i>{cards[index].prompt} </i> 
         </h2>
-        <h3>  
+        <h3 className={styles.cardIdxShow}>  
           ({index + 1} of {cards.length})
         </h3>
-        <button onClick={handleMoreClick}>
+        <button className={styles.cardBtnShow} onClick={handleMoreClick}>
           {showMore ? 'Hide' : 'Show Answer'}
         </button>
         {
