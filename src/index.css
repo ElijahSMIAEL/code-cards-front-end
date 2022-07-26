@@ -76,3 +76,23 @@ h1 {
   align-items: center;
   justify-content: center;
 }
+main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 30px auto;
+  padding: 30px;
+}
+
+input {
+  margin: 30px auto;
+}
+
+select{
+  margin: 30px auto;
+}
