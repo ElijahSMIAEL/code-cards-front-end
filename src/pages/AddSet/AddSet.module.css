@@ -1,0 +1,12 @@
+.AddSetGlobal {
+  color: white;
+  text-align: center;
+}
+
+input {
+  margin-bottom: 3vh;
+}
+
+select {
+  margin: 1vh auto 8vh;
+}

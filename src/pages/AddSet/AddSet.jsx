@@ -33,13 +33,14 @@ const AddSet = (props) => {
   }
 
   return (
-    <main>
+    <main className={styles.AddSetGlobal}>
       <h1 className={styles.AddSetHeader}>Create a Set!</h1>
       <form 
         onSubmit={handleSubmit}
         autoComplete="off"
         className={styles.AddSetForm}
       >
+        <h5>Set Name</h5>
         <input 
           className={styles.titleInput} 
           type="text"
@@ -47,6 +48,7 @@ const AddSet = (props) => {
           value={formData.title}
           onChange={handleChange} 
         />
+        <h5>Select a Language</h5>
         <select
           className={styles.categorySelect} 
           name="category" 
