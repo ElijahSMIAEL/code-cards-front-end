@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import * as profileService from '../../services/profileService'
 import { Link } from 'react-router-dom'
+import ProfileCard from '../../components/ProfileCard/ProfileCard'
 
 
 
@@ -20,17 +21,12 @@ const Profiles = () => {
     <>
       {profiles.length ? 
         <>
-          {profiles.map(profile => 
-          <Link 
-          to='/profile-details' 
-          key={profile._id} 
-          state={{ profile }}
-          >
-            <div>
-            <h2>{profile.name}</h2>
-            </div>
-          </Link>
-            )}
+          {profiles.map(profile =>
+            <ProfileCard 
+              profile={profile}
+              key={profile._id}
+            />
+          )}
         </>
       :
         <p>No profiles yet</p>

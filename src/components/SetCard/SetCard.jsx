@@ -1,4 +1,4 @@
-import styles from './Set.module.css'
+import styles from './SetCard.module.css'
 import { Link } from 'react-router-dom'
 
 const Set = (props) => {

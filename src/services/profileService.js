@@ -20,4 +20,11 @@ async function addPhoto(photoData, profileId) {
   return await res.json()
 }
 
-export { getAllProfiles, addPhoto }
+async function getProfileDetails(profileId) {
+  const res = await fetch(`${BASE_URL}/${profileId}`, {
+    headers: { 'Authorization': `Bearer ${tokenService.getToken()}`}
+  })
+  return await res.json()
+}
+
+export { getAllProfiles, addPhoto, getProfileDetails }

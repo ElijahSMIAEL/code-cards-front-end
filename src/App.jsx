@@ -46,7 +46,8 @@ const App = () => {
     <>
       <NavBar user={user} handleLogout={handleLogout} />
       <Routes>
-        <Route path='/profile-details' element={<ProfileDetails user={user} sets={sets} />} />
+        <Route path='/profile-details/:id' element={<ProfileDetails user={user} sets={sets} />} 
+        />
         <Route path="/" element={<Landing sets={sets} user={user} />} />
         <Route
           path="/signup"
