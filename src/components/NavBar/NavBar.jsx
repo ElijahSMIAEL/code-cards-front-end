@@ -8,17 +8,20 @@ const NavBar = ({ user, handleLogout }) => {
         <nav>
           <div>
             <h1>Welcome, {user.name}</h1>
+            <Link to="/">
+              <span class="material-symbols-outlined">home</span>
+            </Link>
             <Link to="/profiles">
               <span class="material-symbols-outlined">group</span>
             </Link>
-            <Link to="" onClick={handleLogout}>
-              <span class="material-symbols-outlined">logout</span>
-            </Link>
-            <Link to="/changePassword">
-              <span class="material-symbols-outlined">key</span>
-            </Link>
             <Link to="/AddSet">
               <span class="material-symbols-outlined">add</span>
+            </Link>
+            <Link to="/changePassword">
+              <span class="material-symbols-outlined">settings</span>
+            </Link>
+            <Link to="" onClick={handleLogout}>
+              <span class="material-symbols-outlined">logout</span>
             </Link>
           </div>
         </nav>
