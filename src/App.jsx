@@ -43,13 +43,19 @@ const App = () => {
     navigate('/')
   }
 
+  const handleDeleteSet = async id => {
+    const deletedSet = await setService.deleteOne(id)
+    setSets(sets.filter(set => set._id !== deletedSet._id))
+    navigate('/')
+  }
+
 
   return (
     <>
       <Routes>
         <Route path='/profile-details/:id' element={<ProfileDetails user={user} sets={sets} />} 
         />
-        <Route path="/" element={<Landing  sets={sets} user={user} />} />
+        <Route path="/" element={<Landing handleDeleteSet={handleDeleteSet}  sets={sets} user={user} />} />
         <Route
           path="/signup"
           element={<Signup handleSignupOrLogin={handleSignupOrLogin} />}
