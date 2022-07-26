@@ -13,15 +13,29 @@ code {
 
 :root {
   --black: #07020D;
-  --accent: #5DB7DE;
+  --accent: white;
   --background: #F1E9DB;
   --secondary: #A39B8B;
   --secondary-dark: #716A5C;
 }
 
+.btn.btn-danger {
+  margin: 10px;
+  border: solid 2px #212529;
+  box-shadow: 2px 2px 6px grey;
+  font-size: 12px;
+}
+
+.btn.btn-secondary {
+  display: flex;
+  border: solid 2px #212529;
+  box-shadow: 2px 2px 6px grey;
+  font-size: 12px;
+}
+
 a {
   color: var(--accent);
-  padding: 1vmin;
+  padding: 0px;
   border-radius: none;
   text-decoration: none !important;
 }
@@ -33,7 +47,7 @@ a.active {
 }
 
 a:hover {
-  color: #5DB7DE;
+  color: white;
 }
 
 nav > a {
@@ -45,20 +59,23 @@ nav > a {
 }
 
 .card {
-  margin: 30px;
-  background-color: rgb(24, 63, 63);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1vw;
+  min-width: 25vw;
+  min-height: 20vh;
+  background-color: #343a40;
   border-radius: 3px;
-  box-shadow: 10px 10px 10px #000000;
-  border: solid 2px lightcoral;
+  box-shadow: 5px 5px 15px grey;
+  border: solid 3px #212529;
 }
+
 
 .card-body {
+  margin: 1vh;
   border-radius: 3px;
-}
-
-h1 {
-  /* color: #5DB7DE; */
-  color: white;
+  padding: 0px;
 }
 
 #category-select {
@@ -71,7 +88,6 @@ h1 {
 
 h1 {
   display: flex;
-  /* color: #5DB7DE; */
   color: white;
   align-items: center;
   justify-content: center;
@@ -103,5 +119,6 @@ select{
 
 .app-title {
   font-size: 60px;
-  margin: 5vh;
+  margin-bottom: 5vh;
+  padding-top: 5vh;
 }
