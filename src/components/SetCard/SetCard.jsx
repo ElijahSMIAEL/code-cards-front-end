@@ -10,6 +10,12 @@ const Set = (props) => {
             <h1>{set.title}</h1>
         </div>
       </Link>
+      <button 
+            className="btn btn-sm btn-danger m-left"
+            onClick={()=> props.handleDeleteSet(set._id)}
+          >
+            Delete
+          </button>
     </div>
   )
 }
