@@ -10,6 +10,8 @@ const Set = (props) => {
             <h1>{set.title}</h1>
         </div>
       </Link>
+      <Link state={{set}} to={`/sets/${set._id}/edit`}>
+      <button className="btn btn-info">Edit</button></Link>
       {props.user?.profile === set.owner?._id &&
           <button 
             className="btn btn-danger"
