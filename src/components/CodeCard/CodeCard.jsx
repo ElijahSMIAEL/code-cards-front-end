@@ -20,7 +20,9 @@ const CodeCard = (props) => {
           backgroundColor: "white"
         }}
         />
-        <button onClick={()=> props.handleDeleteCard(setId, cardId)}>Delete</button>
+        {props.user?.profile === card.owner?._id &&
+        <button className="btn btn-danger"onClick={()=> props.handleDeleteCard(setId, cardId)}>Delete</button>
+        }
     </div>
   )
 }

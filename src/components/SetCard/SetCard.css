@@ -3,3 +3,9 @@
   box-shadow: 10px 10px 10px #000000;
   font-size: 12px;
 }
+
+.btn.btn-info {
+  display: flex;
+  box-shadow: 10px 10px 10px #000000;
+  font-size: 12px;
+}
