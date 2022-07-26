@@ -54,12 +54,12 @@ console.log("This is the set details", setDetails);
           ({index + 1} of {cards.length})
         </h3>
         <div className={styles.btnCardCarousel}>
-        <button className={styles.cardBtnShow} onClick={handleBack}>
-          Back
-        </button>
-        <button className={styles.cardBtnShow} onClick={handleClick}>
-          Next
-        </button>
+          <button className={styles.cardBtnShow} onClick={handleBack}>
+            Back
+          </button>
+          <button className={styles.cardBtnShow} onClick={handleClick}>
+            Next
+          </button>
         </div>
         <button className={styles.cardBtnShow} onClick={handleMoreClick}>
           {showMore ? 'Hide' : 'Show Answer'}
