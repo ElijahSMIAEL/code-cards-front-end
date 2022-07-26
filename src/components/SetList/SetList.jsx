@@ -1,14 +1,15 @@
 import styles from './SetList.module.css'
-import Set from '../Set/Set'
+import SetCard from '../SetCard/SetCard'
 
 const SetList = (props) => {
   const sets = props.sets
   const ownedSets = sets.filter(set => set.owner._id === props.profile)
+  
 
   return (
     <div>
       {ownedSets.map(set => 
-        <Set 
+        <SetCard 
           key={set._id}
           user={props.user}
           set={set}

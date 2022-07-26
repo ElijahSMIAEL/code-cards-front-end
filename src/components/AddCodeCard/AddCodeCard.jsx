@@ -6,7 +6,7 @@ import * as setService from '../../services/setService'
 const AddCodeCard = (props) => {
   const set = props.set
   const navigate = useNavigate()
-  const [cards, setCards] = useState([])
+  
   const [formData, setFormData] = useState({
     prompt: '',
     answer: ''
@@ -22,8 +22,7 @@ const AddCodeCard = (props) => {
   const handleSubmit = async e => {
     e.preventDefault()
     try {
-      const newCard = await setService.createCard(set._id, formData)
-        setCards([...cards, newCard])
+      props.handleAddCard(set._id, formData)
     } catch (err) {
         console.log(err)
     }
