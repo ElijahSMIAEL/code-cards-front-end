@@ -6,7 +6,7 @@ const NavBar = ({ user, handleLogout }) => {
     <>
       {user ?
         <nav>
-          <div className={styles.container}>
+          <div className={styles.navContainer}>
             <Link to="/">
               <span class="material-symbols-outlined">home</span>
             </Link>
@@ -26,7 +26,7 @@ const NavBar = ({ user, handleLogout }) => {
         </nav>
       :
         <nav>
-          <div className={styles.container}>
+          <div className={styles.navContainer}>
             <Link to="/login">
               <span class="material-symbols-outlined">login</span>
             </Link>
