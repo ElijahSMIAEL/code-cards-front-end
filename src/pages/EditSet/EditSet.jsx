@@ -12,6 +12,8 @@ const EditSet = (props) => {
   const location = useLocation()
   const [setDetails, setSetDetails] = useState({})
   const setId = setDetails._id
+  console.log("THIS IS THE OWNER",setDetails.owner?._id)
+  console.log("THIS IS THE USER",user.profile)
   const isOwner = setDetails.owner?._id === user.profile
 
   useEffect(() => {
@@ -41,6 +43,7 @@ const EditSet = (props) => {
       <div>
       { setDetails.cards.map(card => 
         <CodeCard 
+          isOwner={isOwner}
           setDetails={setDetails}
           handleDeleteCard={handleDeleteCard}
           card={card}
