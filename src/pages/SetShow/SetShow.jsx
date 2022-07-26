@@ -46,7 +46,7 @@ function handleMoreClick() {
   return ( 
     <main>
       {!setDetails.cards || !setDetails.cards.length > 0 ? 
-      <h2>No Cards</h2>
+      <h2>There are no Code-Cards in this Set...</h2>
       :
       <div className="card">
         <h1 className={styles.cardPromptShow}>
