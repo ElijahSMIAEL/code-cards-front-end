@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import * as setService from "../../services/setService";
-import { useLocation, Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import styles from "./SetShow.module.css";
 import Editor from "react-simple-code-editor";
 import { highlight, languages } from "prismjs/components/prism-core";
@@ -14,7 +14,6 @@ const SetShow = (props) => {
   const [index, setIndex] = useState(0)
   const [showMore, setShowMore] = useState(false)
   const cards = setDetails.cards
-  const set = setDetails
 
 
 
@@ -46,13 +45,8 @@ function handleMoreClick() {
 
   return ( 
     <main>
-      {!setDetails.cards || !setDetails.cards.length > 0 ?
-      <div className={styles.setNoShow}>
+      {!setDetails.cards || !setDetails.cards.length > 0 ? 
       <h2>There are no Code-Cards in this Set...</h2>
-      <Link  state={{set}} to={`/sets/${set._id}/edit`}>
-      <button className="btn btn-secondary">Add Code-Cards</button>
-      </Link>
-      </div>
       :
       <div className="card">
         <h3 className={styles.cardPromptShow}>
@@ -66,7 +60,7 @@ function handleMoreClick() {
             highlight={codeBlock => highlight(codeBlock, languages.js)}
             style ={{
               backgroundColor: "white",
-              minWidth: "280px",
+              minWidth: "60%",
               width: "fit-content",
               margin: "3vw",
               padding: "0.5vh",
@@ -77,10 +71,10 @@ function handleMoreClick() {
           ({index + 1} of {cards.length})
         </h3>
         <div className={styles.btnCardCarousel}>
-          <button className="btn btn-secondary" onClick={handleBack}>
+          <button class="btn btn-secondary" onClick={handleBack}>
             Back
           </button>
-          <button className="btn btn-secondary" onClick={handleClick}>
+          <button class="btn btn-secondary" onClick={handleClick}>
             Next
           </button>
         </div>
