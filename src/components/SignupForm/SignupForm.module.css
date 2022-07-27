@@ -13,5 +13,21 @@
 }
 
 .inputContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 1rem;
+}
+
+.inputContainerP {
+  margin-right: 105px;
+}
+
+.inputContainerPa {
+  margin-right: 40px;
+}
+
+.inputContainerUp {
+  margin-left: 260px;
+  color: #5DB7DE;
 }
