@@ -36,6 +36,7 @@ h2 {
 }
 
 .cardPromptShow {
+  text-align: center;
   font-size: 2rem;
   font-weight: bolder;
 }
@@ -64,4 +65,11 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+@media only screen and (max-width:430px) {
+  .cardPromptShow {
+    width: 80vw;
+    max-width: 80vw;
+  }
 }
