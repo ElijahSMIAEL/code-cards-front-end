@@ -34,7 +34,7 @@ const EditSet = (props) => {
 
   return (
     <main>
-      <h1>{setDetails.title}</h1>
+      <input className={styles.titleInput} type="text" placeholder={setDetails.title} value={setDetails.title}/>
       {!setDetails.cards ? 
       <h2>Loading...</h2>
       :

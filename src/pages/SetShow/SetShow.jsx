@@ -59,7 +59,9 @@ function handleMoreClick() {
             codeBlock = {cards[index].code}
             highlight={codeBlock => highlight(codeBlock, languages.js)}
             style ={{
-              backgroundColor: "white"
+              backgroundColor: "white",
+              width: "26vw",
+              padding: "0.5vh",
             }}
           />
         }
