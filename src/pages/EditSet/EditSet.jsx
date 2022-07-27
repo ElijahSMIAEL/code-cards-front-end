@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useLocation, Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import styles from './EditSet.module.css'
 import AddCodeCard from "../../components/AddCodeCard/AddCodeCard";
 import * as setService from '../../services/setService'
@@ -13,7 +13,6 @@ const EditSet = (props) => {
   const [setDetails, setSetDetails] = useState({})
   const setId = setDetails._id
   const isOwner = setDetails.owner?._id === user.profile
-  const set = setDetails
   
   useEffect(() => {
     const fetchSetDetails = async () => {
@@ -36,9 +35,6 @@ const EditSet = (props) => {
   return (
     <main>
       <h1>{setDetails.title}</h1>
-      <Link state={{set}} to={`/sets/${set._id}`}>
-      <button className="btn btn-secondary">Test with these Cards</button>
-      </Link>
       {!setDetails.cards ? 
       <h2>Loading...</h2>
       :
