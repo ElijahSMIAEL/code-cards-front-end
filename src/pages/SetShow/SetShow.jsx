@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import * as setService from "../../services/setService";
+import * as authService from "../../services/authService";
 import { useLocation, Link } from 'react-router-dom';
 import styles from "./SetShow.module.css";
 import Editor from "react-simple-code-editor";
@@ -9,12 +10,14 @@ import 'prismjs/components/prism-javascript';
 import 'prismjs/themes/prism.css';
 
 const SetShow = (props) => {
+  const [user, setUser] = useState(authService.getUser())
   const location = useLocation()
   const [setDetails, setSetDetails] = useState({});
   const [index, setIndex] = useState(0)
   const [showMore, setShowMore] = useState(false)
   const cards = setDetails.cards
   const set = setDetails
+  
 
 
 
@@ -44,15 +47,21 @@ function handleMoreClick() {
   setShowMore(!showMore)
 }
 
+
   return ( 
     <main>
+      { setDetails.owner ? 
       <div className={styles.setShowContainer}>
       {!setDetails.cards || !setDetails.cards.length > 0 ?
       <div className={styles.setNoShow}>
         <h2>There are no Code-Cards in this Set...</h2>
-        <Link  state={{set}} to={`/sets/${set._id}/edit`}>
+        { setDetails.owner._id === user.profile ?
+          <Link  state={{set}} to={`/sets/${set._id}/edit`}>
           <button className="btn btn-secondary">Add Code-Cards</  button>
-        </Link>
+          </Link>
+          :
+          <h2>Bummer...</h2>
+        }
       </div>
       :
       <div className="card">
@@ -91,6 +100,9 @@ function handleMoreClick() {
       </div>
       }
       </div>
+      :
+      <h1>Loading...</h1>
+      }
     </main>
   );
 }

@@ -77,6 +77,7 @@ const AddCodeCard = (props) => {
           textareaClassName="code-editor"
           style={{
             backgroundColor: "white",
+            height: "fit-content",
           }}
         />
         <button disabled={isFormInvalid()} className="btn btn-secondary">Add Code Card
