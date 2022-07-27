@@ -59,3 +59,9 @@ h2 {
   font-weight: bold;
   color: #5DB7DE;
 }
+
+.setNoShow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
