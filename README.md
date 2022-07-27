@@ -1,68 +1,51 @@
-# Decoupled MERN Stack with JWT Auth Template - Front End
+# Code Cards - Front End
 
-This is the front end of a decoupled MERN Stack app that includes JWT Authentication.
+**From:**
 
-When combined with the back end found [here](https://github.com/SEI-Remote/decoupled-mern-jwt-auth-template-back-end), you'll have all you need to build a full stack MERN app!
+Jesse Meirink - https://github.com/jmeirink
 
-Use this to go build things! 🚀
+Elijah Andrews - https://github.com/ElijahSMIAEL
 
-## To Use This Template
+Ryan Cooley - https://github.com/CoolRy1031
 
-**Replace `<name-of-your-app-here>` in the commands below with the name of your app!**
+Pierce Petit - https://github.com/piercepetit7
+</br></br>
 
-```bash
-git clone https://github.com/SEI-Remote/decoupled-mern-jwt-auth-template-front-end <name-of-your-app-here>-front-end
-cd <name-of-your-app-here>-front-end
-```
+<img width="300" src="./public/images/codecards.png">
+</br></br>
 
-Once you are in the project directory:
 
-```bash
-rm -rf .git
-```
+This is the front end of a decoupled MERN Stack app that includes Google OAuth. When combined with the back end found [here](https://github.com/ElijahSMIAEL/code-cards-back-end), this is an app created to give coders a place to share their code cards to learn code better.
+</br></br>
 
-Here's what your command line output should like after this step (note that the indicator that we are in a git repository is gone!)
+### [Link to view the deployed webiste](https://sei-code-cards.netlify.app/)
+[Trello Planning Materials](https://trello.com/b/MlRIyKIb/code-cards)</br>
+[Back End GithHub Repo](https://github.com/ElijahSMIAEL/code-cards-back-end)
+</br></br>
 
-<img src="https://i.imgur.com/L47kNOZ.png" alt="The command line before and after running the rm -rf .git command. Before git:(main) is visible indiating that the directory contains a git repository, after the command it is not.">
+__Technologies used:__
+</br>
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+</br>
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+</br>
+![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
+</br>
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+</br>
+![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+</br>
+Deploying front end with:
+</br>
+![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7)
+</br>
+Deploying back end with:
+</br>
+![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white)
+</br>
+</br></br>
 
-Re-initialize a git repository:
-
-```bash
-git init
-```
-
-Use the GitHub CLI to create a new public project repository on GitHub and add a remote named origin for this repo:
-
-```bash
-gh repo create <name-of-your-app-here>-front-end --public --source=. --remote=origin
-```
-
-Run `npm i` to fetch the template's dependencies:
-
-```bash
-npm i
-```
-
-touch a `.env` file:
-
-```bash
-touch .env
-```
-
-Fill it with the following:
-
-```
-REACT_APP_BACK_END_SERVER_URL=http://localhost:3001
-```
-
-> 🚨 DO NOT place secrets in this `.env` file. The contents of this file WILL be exposed to site visitors. We are only using the front-end .env to create variables specific to the environment the application is running in.
-
-Delete this README.md, then make an initial commit:
-
-```bash
-git add .
-git commit -m "initial commit"
-git push -u origin main
-```
-
-You're done!
+__Credits:__</br>
+![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
+</br>
+</br></br>
