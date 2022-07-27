@@ -8,7 +8,7 @@ const Set = (props) => {
     <Link state={{set}} to={`/sets/${set._id}`}>
     <div className={styles.setCard}>
         <div className="card-body">
-            <h2 className={styles.setHeader}>{set.title}</h2>
+            <h1 className={styles.setHeader}>{set.title}</h1>
         </div>
       { isOwner ?
       <div className="card-body">
@@ -22,7 +22,7 @@ const Set = (props) => {
           </button>
         </div>
         :
-        <h2>Yes</h2>
+        <h2>{set.category}</h2>
       }
     </div>
     </Link>

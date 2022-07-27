@@ -20,6 +20,7 @@ const Profiles = (props) => {
 
   return (
     <main>
+      <div className={styles.profilesContainer}>
       {profiles.length ? 
         <>
           {profiles.map(profile =>
@@ -34,6 +35,7 @@ const Profiles = (props) => {
       :
         <p>No profiles yet</p>
       }
+      </div>
     </main>
   )
 }
