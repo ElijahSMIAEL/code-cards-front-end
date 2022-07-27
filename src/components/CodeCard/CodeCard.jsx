@@ -18,7 +18,7 @@ const CodeCard = (props) => {
         highlight={codeBlock => highlight(codeBlock, languages.js)}
         style={{
           backgroundColor: "white",
-          width: "50vw",
+          width: "26vw",
           padding: "0.5vh",
         }}
         />

@@ -6,7 +6,7 @@ import styles from './Profiles.module.css'
 
 
 
-const Profiles = () => {
+const Profiles = (props) => {
   const [profiles, setProfiles] = useState([])
   
   useEffect(() => {
@@ -19,11 +19,12 @@ const Profiles = () => {
   
 
   return (
-    <>
+    <main>
       {profiles.length ? 
         <>
           {profiles.map(profile =>
-            <ProfileCard 
+            <ProfileCard
+              sets={props.sets}
               profile={profile}
               key={profile._id}
             />
@@ -33,7 +34,7 @@ const Profiles = () => {
       :
         <p>No profiles yet</p>
       }
-    </>
+    </main>
   )
 }
 

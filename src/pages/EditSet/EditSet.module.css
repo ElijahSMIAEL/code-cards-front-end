@@ -3,3 +3,7 @@
   flex-direction: column;
   align-items: center;
 }
+
+.titleInput {
+  text-align: center;
+}
