@@ -1,3 +1,6 @@
+h2 {
+  text-align: center;
+}
 
 .cardBtnShow {
   display: flex;
@@ -19,8 +22,6 @@
   color: #fff;
 }
 
-
-
 .cardIdxShow {
   display: grid;
   justify-content: right;
@@ -32,15 +33,18 @@
   margin-bottom: 20px;
   font-size: 20px;
 }
+
 .cardPromptShow {
   font-size: 5rem;
   font-weight: bolder;
 }
+
 .btnCardCarousel {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .cardAnswerShow {
   display: flex;
   justify-content: center;
@@ -54,4 +58,3 @@
   font-weight: bold;
   color: #5DB7DE;
 }
-
