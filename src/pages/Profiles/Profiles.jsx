@@ -16,6 +16,8 @@ const Profiles = (props) => {
     }
     fetchProfiles()
   }, [])
+
+  const otherProfiles = profiles.filter(profile => profile._id !== props.profileId)
   
 
   return (
@@ -23,7 +25,7 @@ const Profiles = (props) => {
       <div className={styles.profilesContainer}>
       {profiles.length ? 
         <>
-          {profiles.map(profile =>
+          {otherProfiles.map(profile =>
             <ProfileCard
               sets={props.sets}
               profile={profile}
