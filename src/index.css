@@ -139,3 +139,9 @@ select{
   margin: .5vh;
   font-size: 3rem;
 }
+
+@media only screen and (min-width:1500px) {
+  .card {
+    min-width: 5vw;
+  }
+}

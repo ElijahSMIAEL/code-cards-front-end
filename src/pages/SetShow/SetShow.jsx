@@ -60,7 +60,9 @@ function handleMoreClick() {
             highlight={codeBlock => highlight(codeBlock, languages.js)}
             style ={{
               backgroundColor: "white",
-              width: "26vw",
+              minWidth: "60%",
+              width: "fit-content",
+              margin: "3vw",
               padding: "0.5vh",
             }}
           />
