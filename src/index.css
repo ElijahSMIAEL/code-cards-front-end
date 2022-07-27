@@ -21,7 +21,7 @@ code {
 }
 
 .btn.btn-danger {
-  margin-left: 10px;
+  margin: 5px;
   border: solid 2px #212529;
   box-shadow: 2px 2px 6px grey;
   font-size: 12px;
@@ -31,6 +31,7 @@ code {
   border: solid 2px #212529;
   box-shadow: 2px 2px 6px grey;
   font-size: 12px;
+  margin: 5px ;
 }
 
 a {
@@ -63,6 +64,7 @@ nav > a {
   flex-direction: column;
   align-items: center;
   margin: 1vw;
+  width: fit-content;
   min-width: 25vw;
   min-height: 20vh;
   background-color: #343a40;
@@ -99,12 +101,16 @@ h2{
 
 h3 {
   color: white;
+  max-width: 50vw;
+  padding: 1vw;
 }
 
 main {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  margin-bottom: 13vh;
+  align-items: center;
 }
 
 form {
@@ -120,10 +126,6 @@ input {
 
 select{
   margin: 30px auto;
-}
-
-.label {
-  color: #5DB7DE;
 }
 
 .app-title {

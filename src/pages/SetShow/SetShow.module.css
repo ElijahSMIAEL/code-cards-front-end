@@ -6,11 +6,12 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 5vh;
-  background-color: #A39B8B;
-  border-radius: 10px;
-  border: none;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  height: 2vh;
+  background-color: #adb5bd;
+  border-radius: 3px;
+  border: solid 2px #212529;
+  box-shadow: 2px 2px 6px grey;
+  font-size: 12px;
   padding: 1.9vh .9vw 1.9vh .9vw;
   margin: 20px;
   font-size: 24px;
@@ -18,8 +19,8 @@ h2 {
 }
 
 .cardBtnShow:hover {
-  background-color: #5DB7DE;
   color: #fff;
+  background-color: #212529;
 }
 
 .cardIdxShow {
@@ -35,7 +36,7 @@ h2 {
 }
 
 .cardPromptShow {
-  font-size: 5rem;
+  font-size: 2rem;
   font-weight: bolder;
 }
 

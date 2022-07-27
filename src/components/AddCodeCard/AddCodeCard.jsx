@@ -34,12 +34,20 @@ const AddCodeCard = (props) => {
     } catch (err) {
         console.log(err)
     }
+    clearInput()
   }
-
+  
 
   const {prompt, code} = formData
   const isFormInvalid = () => {
     return !(prompt, code)
+  }
+
+  function clearInput() {
+    setFormData({
+      prompt: '',
+      code: ''
+    })
   }
 
   return (
