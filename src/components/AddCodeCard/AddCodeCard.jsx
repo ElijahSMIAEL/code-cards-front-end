@@ -1,4 +1,4 @@
-import styles from './AddCodeCard.modules.css'
+import styles from './AddCodeCard.module.css'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import * as setService from '../../services/setService'
@@ -36,15 +36,16 @@ const AddCodeCard = (props) => {
     }
   }
 
+
   const {prompt, code} = formData
   const isFormInvalid = () => {
     return !(prompt, code)
   }
 
   return (
-    <main>
-      <form 
-        className={styles.AddCodeCardForm}
+    <main >
+      <form
+        className={styles.AddCardForm} 
         autoComplete="off"
         onSubmit={handleSubmit}
       >
@@ -70,15 +71,6 @@ const AddCodeCard = (props) => {
             backgroundColor: "white",
           }}
         />
-        
-        {/* <textarea 
-          onChange={handleChange}
-          type="text" 
-          name="answer" 
-          id="answer-input"
-          placeholder='Answer...'
-          value={formData.answer}
-        /> */}
         <button disabled={isFormInvalid()} className="btn btn-secondary">Add Code Card
         </button>
       </form>

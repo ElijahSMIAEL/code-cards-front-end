@@ -10,6 +10,10 @@
   border-radius: 5px;
 }
 
-span {
-  padding: 7px;
+nav {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  padding: 2vh;
+  background-color: black;
 }

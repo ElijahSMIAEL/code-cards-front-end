@@ -11,13 +11,15 @@ const CodeCard = (props) => {
   const cardId = card._id
   const setId = props.setDetails._id
   return (
-    <div>
-      <h2>{card.prompt}</h2>
+    <div class={styles.codeCard}>
+      <h3>{card.prompt}</h3>
       <Editor
         value={codeBlock}
         highlight={codeBlock => highlight(codeBlock, languages.js)}
         style={{
-          backgroundColor: "white"
+          backgroundColor: "white",
+          width: "50vw",
+          padding: "0.5vh",
         }}
         />
         {props.isOwner &&
