@@ -18,6 +18,10 @@ h2 {
   font-weight: bold;
 }
 
+.setShowContainer {
+  margin-bottom: 13vh;
+}
+
 .cardBtnShow:hover {
   color: #fff;
   background-color: #212529;
@@ -36,6 +40,7 @@ h2 {
 }
 
 .cardPromptShow {
+  text-align: center;
   font-size: 2rem;
   font-weight: bolder;
 }
@@ -58,4 +63,17 @@ h2 {
   margin: 20px;
   font-weight: bold;
   color: #5DB7DE;
+}
+
+.setNoShow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media only screen and (max-width:430px) {
+  .cardPromptShow {
+    width: 80vw;
+    max-width: 80vw;
+  }
 }
