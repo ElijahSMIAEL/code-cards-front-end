@@ -64,6 +64,7 @@ nav > a {
   flex-direction: column;
   align-items: center;
   margin: 1vw;
+  margin-bottom: 3vw;
   width: fit-content;
   min-width: 35vw;
   min-height: 20vh;
@@ -71,7 +72,6 @@ nav > a {
   border-radius: 3px;
   box-shadow: 5px 5px 15px grey;
   border: solid 3px #212529;
-  margin-bottom: 13vh;
 }
 
 
@@ -141,5 +141,11 @@ select{
 @media only screen and (min-width:1500px) {
   .card {
     min-width: 5vw;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .card {
+    min-width: 60vw;
   }
 }
