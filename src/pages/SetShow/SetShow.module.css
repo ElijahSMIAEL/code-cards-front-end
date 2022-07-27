@@ -18,6 +18,10 @@ h2 {
   font-weight: bold;
 }
 
+.setShowContainer {
+  margin-bottom: 13vh;
+}
+
 .cardBtnShow:hover {
   color: #fff;
   background-color: #212529;
