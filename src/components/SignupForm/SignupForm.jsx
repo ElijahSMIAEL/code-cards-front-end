@@ -70,7 +70,7 @@ const SignupForm = props => {
           onChange={handleChange}
         />
       </div>
-      <div className={styles.inputContainerPa}>
+      <div className={styles.inputContainer}>
         <label htmlFor="password" className={styles.label}>Password</label>
         <input
           type="password"
@@ -81,7 +81,7 @@ const SignupForm = props => {
           onChange={handleChange}
         />
       </div>
-      <div className={styles.inputContainerP}>
+      <div className={styles.inputContainer}>
         <label htmlFor="confirm" className={styles.label}>
           Confirm Password
         </label>
@@ -94,7 +94,7 @@ const SignupForm = props => {
           onChange={handleChange}
         />
       </div>
-      <div className={styles.inputContainerUp}>
+      <div className={styles.inputContainer}>
         <label htmlFor="photo-upload" className='btn btn-secondary'>
           Upload Photo
         </label>
