@@ -3,6 +3,7 @@ body {
   font-family: 'Russo One', sans-serif;
   background-image: url(../public/images/pexels-adrien-olichon-2387793.jpg);
   background-size: cover;
+  background-attachment: fixed;
   height: 100vh;
 }
 
@@ -20,7 +21,7 @@ code {
 }
 
 .btn.btn-danger {
-  margin: 10px;
+  margin-left: 10px;
   border: solid 2px #212529;
   box-shadow: 2px 2px 6px grey;
   font-size: 12px;
@@ -96,6 +97,10 @@ h2{
   color: rgba(245, 245, 245, 0.747);
 }
 
+h3 {
+  color: white;
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -125,4 +130,10 @@ select{
   font-size: 60px;
   margin-bottom: 5vh;
   padding-top: 5vh;
+}
+
+.material-symbols-outlined {
+  padding: 1vh;
+  margin: .5vh;
+  font-size: 3rem;
 }
