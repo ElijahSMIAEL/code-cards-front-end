@@ -109,7 +109,6 @@ main {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  margin-bottom: 13vh;
   align-items: center;
 }
 

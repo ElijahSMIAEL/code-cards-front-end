@@ -3,4 +3,5 @@
   justify-items: center;
   /* grid-template-columns: repeat(3, 1fr); */
   width: 100vw;
+  margin-bottom: 13vh;
 }
