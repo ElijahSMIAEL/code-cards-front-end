@@ -13,7 +13,7 @@ const EditSet = (props) => {
   const [setDetails, setSetDetails] = useState({})
   const setId = setDetails._id
   const isOwner = setDetails.owner?._id === user.profile
-
+  
   useEffect(() => {
     const fetchSetDetails = async () => {
       const setData = await setService.getSetDetails(location.state.set._id)
@@ -34,7 +34,7 @@ const EditSet = (props) => {
 
   return (
     <main>
-      <input className={styles.titleInput} type="text" placeholder={setDetails.title} value={setDetails.title}/>
+      <h1>{setDetails.title}</h1>
       {!setDetails.cards ? 
       <h2>Loading...</h2>
       :
