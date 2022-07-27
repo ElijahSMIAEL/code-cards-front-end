@@ -49,23 +49,9 @@ function handleMoreClick() {
       <h2>There are no Code-Cards in this Set...</h2>
       :
       <div className="card">
-        <h1 className={styles.cardPromptShow}>
+        <h3 className={styles.cardPromptShow}>
           <i>{cards[index].prompt} </i> 
-        </h1>
-        <h3 className={styles.cardIdxShow}>  
-          ({index + 1} of {cards.length})
         </h3>
-        <div className={styles.btnCardCarousel}>
-          <button className={styles.cardBtnShow} onClick={handleBack}>
-            Back
-          </button>
-          <button className={styles.cardBtnShow} onClick={handleClick}>
-            Next
-          </button>
-        </div>
-        <button className={styles.cardBtnShow} onClick={handleMoreClick}>
-          {showMore ? 'Hide' : 'Show Answer'}
-        </button>
         {
           showMore && 
           <Editor 
@@ -77,6 +63,20 @@ function handleMoreClick() {
             }}
           />
         }
+        <h3 className={styles.cardIdxShow}>  
+          ({index + 1} of {cards.length})
+        </h3>
+        <div className={styles.btnCardCarousel}>
+          <button class="btn btn-secondary" onClick={handleBack}>
+            Back
+          </button>
+          <button class="btn btn-secondary" onClick={handleClick}>
+            Next
+          </button>
+        </div>
+        <button className={styles.cardBtnShow} onClick={handleMoreClick}>
+          {showMore ? 'Hide' : 'Show Answer'}
+        </button>
       </div>
       }
     </main>

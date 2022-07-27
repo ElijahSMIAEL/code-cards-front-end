@@ -12,8 +12,6 @@ const EditSet = (props) => {
   const location = useLocation()
   const [setDetails, setSetDetails] = useState({})
   const setId = setDetails._id
-  console.log("THIS IS THE OWNER",setDetails.owner?._id)
-  console.log("THIS IS THE USER",user.profile)
   const isOwner = setDetails.owner?._id === user.profile
 
   useEffect(() => {
@@ -40,7 +38,7 @@ const EditSet = (props) => {
       {!setDetails.cards ? 
       <h2>Loading...</h2>
       :
-      <div>
+      <div className={styles.codeCardContainer}>
       { setDetails.cards.map(card => 
         <CodeCard 
           isOwner={isOwner}
@@ -61,7 +59,7 @@ const EditSet = (props) => {
       <h1>{setDetails.owner?.name}'s Work</h1>
       }
       </div>
-      } 
+      }
     </main>
   )
 }
