@@ -86,7 +86,7 @@ const ChangePasswordForm = props => {
           Change Password
         </button>
         <Link to="/">
-          <button className="btn btn-secondary">
+          <button className="btn btn-danger">
             Cancel
           </button>
         </Link>
