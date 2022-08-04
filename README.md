@@ -15,7 +15,7 @@ Pierce Petit - https://github.com/piercepetit7
 </br></br>
 
 
-This is the front end of a decoupled MERN Stack app that includes Google OAuth. When combined with the back end found [here](https://github.com/ElijahSMIAEL/code-cards-back-end), this is an app created to give coders a place to share their code cards to learn code better.
+This is the front end of a decoupled MERN Stack app that includes JWT Authenication. When combined with the back end found [here](https://github.com/ElijahSMIAEL/code-cards-back-end), this is an app created to give coders a place to share their code cards to learn code better.
 </br></br>
 
 ### [Link to view the deployed webiste](https://sei-code-cards.netlify.app/)
